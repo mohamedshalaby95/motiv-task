@@ -7,7 +7,11 @@ import { initReactI18next } from "react-i18next";
 const resources = {
   en: {
     translation: {
-     "Welcome to React": "Welcome to React and react-i18next",
+      "website name": "Motiv.",
+      "dashboard": "Dashboard",
+      "cars": "Cars",
+      "setting": "Settings",
+      "log out":"Log Out"
     },
   },
   ar: {

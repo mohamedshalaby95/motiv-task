@@ -4,6 +4,7 @@ import { ToastContainer } from "react-toastify";
 import Home from "./screens/home/home";
 import "./App.css";
 import { useTranslation } from "react-i18next";
+import "./i18n";
 function App() {
   const { t, i18n } = useTranslation();
   return (

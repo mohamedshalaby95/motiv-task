@@ -1,15 +1,21 @@
-import React ,{ ReactNode, ReactElement }  from 'react';
-import NavBar from "../navbar/navbar"
+import React, { ReactNode, ReactElement, useState, useCallback } from "react";
+import NavBar from "../navbar/navbar";
+import SideNavbar from "../sideNavbar/sideNavbar";
 interface MyComponentProps {
   children: ReactNode;
 }
-const pageWrapper : React.FC<MyComponentProps> = ({ children }) => {
+const PageWrapper: React.FC<MyComponentProps> = ({ children }) => {
   return (
     <>
-      <NavBar />
-      <div>{children}</div>
+      <div className="flex">
+        <SideNavbar />
+        <div className="w-full">
+          <NavBar />
+          <div>{children}</div>
+        </div>
+      </div>
     </>
   );
 };
 
-export default pageWrapper;
+export default PageWrapper;
