@@ -1,7 +1,7 @@
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 
-import Home from "./screens/home/home";
+import Dashbord from "./screens/dashbord/dashbord";
 import "./App.css";
 import { useTranslation } from "react-i18next";
 import "./i18n";
@@ -25,7 +25,7 @@ function App() {
       <ToastContainer />
       <BrowserRouter>
         <Routes>
-          <Route path="" element={<Home />} />
+          <Route path="" element={<Dashbord />} />
           {/* <Route path="practice" element={<PracticeScreen />} />
           <Route path="*" element={<PageNotFound />} />
           <Route path="rank" element={<RankScreen />} /> */}

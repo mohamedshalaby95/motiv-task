@@ -7,7 +7,7 @@ interface MyComponentProps {
 const PageWrapper: React.FC<MyComponentProps> = ({ children }) => {
   return (
     <>
-      <div className="flex">
+      <div className="flex max-w-[1339px] m-auto">
         <SideNavbar />
         <div className="w-full">
           <NavBar />

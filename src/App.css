@@ -36,6 +36,37 @@
     transform: rotate(360deg);
   }
 } */
+.make-circle-range{
+  margin: 25px 0;
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  border: 10px solid transparent;
+  background-size: 100% 100%, 100% 70%, 50% 50%, 50% 50%, 50% 50%;
+  background-repeat: no-repeat;
+  /* background-image: linear-gradient(#A162F7, #A162F7), */
+    /* linear-gradient(120deg, red 40%, lightgrey 30%); */
+  background-position: center center, left top, right top, left bottom, right bottom;
+  background-origin: content-box, border-box, border-box, border-box, border-box;
+  background-clip: content-box, border-box, border-box, border-box, border-box;
+  transform: rotate(0deg);
+}
+.first-card{
+  background-image: linear-gradient(#A162F7, #A162F7),
+  linear-gradient(80deg, white 40%, lightgrey 30%);
+}
+.secand-card{
+  background-image: linear-gradient(white, white),
+    linear-gradient(120deg, #FF7E86 40%, lightgrey 30%);
+}
+.third-card {
+  background-image: linear-gradient(white, white),
+    linear-gradient(30deg, #A162F7 40%, lightgrey 30%);
+}
+.fourth-card {
+  background-image: linear-gradient(white, white),
+    linear-gradient(40deg, #A162F7 40%, lightgrey 30%);
+}
 
 @tailwind base;
 @tailwind components;
