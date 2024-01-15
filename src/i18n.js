@@ -11,12 +11,16 @@ const resources = {
       "dashboard": "Dashboard",
       "cars": "Cars",
       "setting": "Settings",
-      "log out":"Log Out"
+      "log out": "Log Out",
     },
   },
   ar: {
     translation: {
-      "Welcome to React": "Bienvenue à React et react-i18next",
+      "website name": "Motiv.",
+      "dashboard": "Dashboard",
+      "cars": "Cars",
+      "setting": "Settings",
+      "log out": "Log Out",
     },
   },
 };

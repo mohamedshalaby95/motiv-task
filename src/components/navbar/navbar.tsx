@@ -1,4 +1,5 @@
 import React from "react";
+import LanguageSelector from "../languageSelector/languageSelector";
 
 const navbar = () => {
   return (
@@ -39,6 +40,7 @@ const navbar = () => {
               </form>
             </div>
             <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+              <LanguageSelector />
               <button
                 type="button"
                 className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
@@ -84,7 +86,6 @@ const navbar = () => {
             </div>
           </div>
         </div>
-        <div className="sm:hidden" id="mobile-menu"></div>
       </nav>
     </>
   );
