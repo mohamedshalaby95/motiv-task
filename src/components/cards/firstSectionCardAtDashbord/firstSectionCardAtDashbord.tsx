@@ -17,11 +17,12 @@ const FirstSectionCardAtDashbord: React.FC<IFirstSectionCardAtDashbord> = ({
   iconPath,
   styleClassName,
 }) => {
-    const cardClasses = `bg-[${backgroundColor}] text-[${textColor}]`;
+    const cardClasses = `bg-${backgroundColor} text-[${textColor}]`;
     console.log("cardClasses", cardClasses);
   return (
     <div
       className={`${cardClasses} mx-4 px-[20px]  h-[266px] w-[232px] rounded-md `}
+      style={{ backgroundColor: `${backgroundColor}` }}
     >
       <div className="flex flex-col justify-center items-center m-auto  py-[20px] ">
         <img

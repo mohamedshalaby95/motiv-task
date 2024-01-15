@@ -24,7 +24,8 @@ const SecondSectionCardAtDashbord: React.FC<ISecondSectionCardAtDashbord> = ({
   
   return (
     <div
-      className={`h-[222px] w-[220px] rounded-md bg-${backgroundColor} flex p-3 flex-col mx-2`}
+      className={`h-[222px] w-[220px] rounded-md bg-[${backgroundColor}] flex p-3 flex-col mx-2`}
+      style={{ backgroundColor: `${backgroundColor}` }}
     >
       {/* content text */}
       <div className="flex ">
