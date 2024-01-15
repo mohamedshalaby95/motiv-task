@@ -24,18 +24,18 @@ const navbar = () => {
                   <input
                     type="text"
                     id="simple-search"
-                    className="bg-gray-50 border border-gray-300 text-gray-900 text-[16px] rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    className="bg-gray-50 border  text-[16px] rounded-lg   block mobile:w-[200px] lg:w-full ps-10 p-2.5       "
                     placeholder="Search or type"
                     required
                   />
                 </div>
               </form>
             </div>
-            <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+            <div className=" flex items-center pr-2   sm:pr-0">
               <LanguageSelector />
               <button
                 type="button"
-                className="flex items-center gap-10"
+                className="flex items-center mobile:gap-2 lg:gap-10"
               >
                 <img
                   src="./notification.svg"
@@ -43,7 +43,6 @@ const navbar = () => {
                   className="h-[24px] w-[19.2px]"
                 />
                 <div className="w-[48px] h-[48px] rounded">
-
                   <img
                     src="./portrait-handsome-european-male-student-has-gentle-smile-face-happy-hear-pleasant-news-stands-delighted-wears-round-spectacles-orange-jumper.png"
                     alt="profile img"

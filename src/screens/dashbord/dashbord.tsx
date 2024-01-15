@@ -94,16 +94,16 @@ const Dashbord = () => {
       <PageWrapper>
         <div className="bg-[#F5F5F5] ">
           {/* first section */}
-          <section className="mx-3 flex sm:flex-col lg:flex-row justify-center sm:p-2 lg:p-4">
+          <section className="mx-3 flex mobile:flex-col mobile:items-center lg:flex-row mobile:mt-4 lg:mt-0 justify-center mobile:p-2 lg:p-4 mobile:gap-4 lg:gap-0 ">
             {cards.map((card) => (
               <FirstSectionCardAtDashbord {...card} />
             ))}
           </section>
 
           {/* second section */}
-          <section className="mx-5 flex sm:flex-col lg:flex-row justify-center sm:p-2 lg:p-4">
+          <section className="mx-5 flex mobile:flex-col lg:flex-row justify-center mobile:p-2 lg:p-4 mobile:gap-4 lg:gap-0">
             {/* first card */}
-            <div className="w-[540px] h-[222px] bg-[#FFE0BA] flex flex-col lg:flex-row justify-between items-center px-4  rounded-md">
+            <div className="lg:w-[540px] lg:h-[222px] mobile:p-4 bg-[#FFE0BA] flex  lg:flex-row justify-between items-center lg:px-4  rounded-md">
               {/* text content */}
               <div>
                 <h4 className="text-[24px] text-[#0F2837] font-[ABeeZee]">
@@ -127,7 +127,7 @@ const Dashbord = () => {
               </div>
             </div>
             {/* second  card */}
-            <div className="flex mx-2">
+            <div className="flex  lg:mx-2">
               {secondCards.map((card) => (
                 <SecondSectionCardAtDashbord {...card} />
               ))}
@@ -135,7 +135,7 @@ const Dashbord = () => {
           </section>
 
           {/* section 3 */}
-          <section className="mx-3 flex sm:flex-col lg:flex-row justify-center gap-9 sm:p-2 lg:p-4">
+          <section className="mx-3 flex mobile:flex-col lg:flex-row mobile:items-center justify-center lg:gap-9 mobile:p-2 lg:p-4">
             {thirdCards.map((card) => (
               <ThirdSectionCardAtDashbord {...card} />
             ))}
