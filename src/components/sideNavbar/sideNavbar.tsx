@@ -1,8 +1,15 @@
 import React from 'react';
 import { useTranslation } from "react-i18next";
+import { useNavigate ,useLocation} from "react-router-dom";
+
 
 const SideNavbar = () => {
-     const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const navigate = useNavigate();
+    const location = useLocation();
+  const currentPath = location.pathname;
+  console.log("currentPath ", currentPath);
+ 
     return (
       <div className="min-w-[248px] border-r-2">
         <div className="w-[174px] m-auto ">
@@ -20,7 +27,12 @@ const SideNavbar = () => {
               {/* top side navbar */}
               <div className="">
                 {/* //dashbord */}
-                <div className="flex mt-11 border-1 bg-[#F3F5F8] p-1 rounded-md">
+                <div
+                  onClick={() => navigate("/")}
+                  className={`flex mt-11 border-1 p-1 rounded-md  ${
+                    currentPath === "/" ? "bg-[#F3F5F8]" : ""
+                  }`}
+                >
                   <img
                     className="h-[20px] w-[20px]"
                     src="./dashboard icon.svg"
@@ -31,7 +43,12 @@ const SideNavbar = () => {
                   </span>
                 </div>
                 {/* cars */}
-                <div className="flex mt-2 border-1  p-1 rounded-md">
+                <div
+                  onClick={() => navigate("/cars")}
+                  className={`flex mt-2 border-1  p-1 rounded-md ${
+                    currentPath === "/cars" ? "bg-[#F3F5F8]" : ""
+                  }`}
+                >
                   <img
                     className="h-[20px] w-[20px]"
                     src="./cars icon.svg"

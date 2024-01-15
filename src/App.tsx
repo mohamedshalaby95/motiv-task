@@ -3,6 +3,7 @@ import { ToastContainer } from "react-toastify";
 import { useTranslation } from "react-i18next";
 
 import Dashbord from "./screens/dashbord/dashbord";
+import  Cars from "./screens/cars/Cars"
 import "./App.css";
 import "./i18n";
 function App() {
@@ -26,9 +27,9 @@ function App() {
       <ToastContainer />
       <BrowserRouter>
         <Routes>
-          <Route path="" element={<Dashbord />} />
-          {/* <Route path="practice" element={<PracticeScreen />} />
-          <Route path="*" element={<PageNotFound />} />
+          <Route path="/" element={<Dashbord />} />
+          <Route path="/cars" element={<Cars />} />
+          {/* <Route path="*" element={<PageNotFound />} />
           <Route path="rank" element={<RankScreen />} /> */}
         </Routes>
       </BrowserRouter>
