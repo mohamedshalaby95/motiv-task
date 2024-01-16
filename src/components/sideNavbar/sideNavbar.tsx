@@ -29,7 +29,7 @@ const SideNavbar = () => {
                 {/* //dashbord */}
                 <div
                   onClick={() => navigate("/")}
-                  className={`flex mt-11 border-1 p-1 rounded-md  ${
+                  className={`flex mt-11 border-1 p-1 rounded-md  cursor-pointer ${
                     currentPath === "/" ? "bg-[#F3F5F8]" : ""
                   }`}
                 >
@@ -45,7 +45,7 @@ const SideNavbar = () => {
                 {/* cars */}
                 <div
                   onClick={() => navigate("/cars")}
-                  className={`flex mt-2 border-1  p-1 rounded-md ${
+                  className={`flex mt-2 border-1  p-1 rounded-md cursor-pointer ${
                     currentPath === "/cars" ? "bg-[#F3F5F8]" : ""
                   }`}
                 >
