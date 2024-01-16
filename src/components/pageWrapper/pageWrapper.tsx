@@ -1,4 +1,4 @@
-import React, { ReactNode, ReactElement, useState, useCallback } from "react";
+import React, { ReactNode, useState, useCallback } from "react";
 import NavBar from "../navbar/navbar";
 import SideNavbar from "../sideNavbar/sideNavbar";
 import { useTranslation } from "react-i18next";

@@ -8,6 +8,7 @@ export interface Icar {
   imgCarPath: string;
   numOfUser: string;
   price: string;
+  status?: string;
 }
 const CarCard: React.FC<Icar> = ({
   title,
