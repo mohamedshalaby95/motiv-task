@@ -4,11 +4,11 @@ import { useNavigate ,useLocation} from "react-router-dom";
 
 
 const SideNavbar = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const navigate = useNavigate();
     const location = useLocation();
   const currentPath = location.pathname;
-  console.log("currentPath ", currentPath);
+  
  
     return (
       <div className="min-w-[248px] border-r-2">

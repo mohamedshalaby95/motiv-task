@@ -1,8 +1,111 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import PageWrapper from '../../components/pageWrapper/pageWrapper';
 
+import CarCard,{ Icar } from '../../components/cards/carCard/carCard';
+// moka car data 
+const carsData = [
+  {
+    title: "Porshe 718 Cayman S",
+    isAtCart: false,
+    drive: "Coupe",
+    type: "Manual",
+    imgCarPath: "./car1.png",
+    numOfUser: "4",
+    price: "$200",
+  },
+  {
+    title: "Porshe 718 Cayman S",
+    isAtCart: true,
+    drive: "Coupe",
+    type: "Manual",
+    imgCarPath: "./car2.png",
+    numOfUser: "5",
+    price: "$255",
+  },
+  {
+    title: "Porshe 718 Cayman S",
+    isAtCart: false,
+    drive: "Coupe",
+    type: "Manual",
+    imgCarPath: "./car3.png",
+    numOfUser: "4",
+    price: "$400",
+  },
+  {
+    title: "Porshe 718 Cayman S",
+    isAtCart: false,
+    drive: "Coupe",
+    type: "Manual",
+    imgCarPath: "./car5.png",
+    numOfUser: "4",
+    price: "$200",
+  },
+  {
+    title: "Porshe 718 Cayman S",
+    isAtCart: false,
+    drive: "Coupe",
+    type: "Manual",
+    imgCarPath: "./car6.png",
+    numOfUser: "5",
+    price: "$255",
+  },
+  {
+    title: "Porshe 718 Cayman S",
+    isAtCart: false,
+    drive: "Coupe",
+    type: "Manual",
+    imgCarPath: "./car7.png",
+    numOfUser: "4",
+    price: "$400",
+  },
+  {
+    title: "Porshe 718 Cayman S",
+    isAtCart: false,
+    drive: "Coupe",
+    type: "Manual",
+    imgCarPath: "./car4.png",
+    numOfUser: "4",
+    price: "$200",
+  },
+  {
+    title: "Porshe 718 Cayman S",
+    isAtCart: false,
+    drive: "Coupe",
+    type: "Manual",
+    imgCarPath: "./car8.png",
+    numOfUser: "6",
+    price: "$300",
+  },
+  {
+    title: "Porshe 718 Cayman S",
+    isAtCart: false,
+    drive: "Coupe",
+    type: "Manual",
+    imgCarPath: "./car9.png",
+    numOfUser: "5",
+    price: "$600",
+  },
+];
+
+
+
 const Cars = () => {
-    return (
+  const [cars,setCars]=useState<Icar[]>([])
+  // function callApi() {
+  //   fetch("/fake", { method: "GET" })
+  //     .then((data) =>{
+  // data.json()
+  // you should add set cars here
+  // } ) 
+  //     .then((json) => console.log(JSON.stringify(json))); 
+  // }
+  useEffect(() => {
+    // here we should to fetch date
+    // callApi();
+    setCars(carsData);
+  }, [])
+ 
+   return (
       <>
         <PageWrapper>
           <div className="bg-[#F5F5F5] p-5">
@@ -34,11 +137,11 @@ const Cars = () => {
               {/* right nav */}
               <div className="flex gap-[16px] items-start">
                 <div className="bg-[#FFFFFF]  w-[44px] h-[44px] rounded-full flex justify-center items-center">
-                <img
-                  src="./filter2 icon.svg"
-                  alt="icon filter 1"
-                  className="rounded-full mt-1"
-                />
+                  <img
+                    src="./filter2 icon.svg"
+                    alt="icon filter 1"
+                    className="rounded-full mt-1"
+                  />
                 </div>
 
                 <img
@@ -48,6 +151,12 @@ const Cars = () => {
                 />
               </div>
             </nav>
+            {/* cars display */}
+            <section className="flex flex-col lg:flex-row  lg:flex-wrap gap-4 lg:gap-6 mobile:mt-10 lg:mt-16 mobile:items-center ">
+              {cars.map((car) => (
+                <CarCard {...car} />
+              ))}
+            </section>
           </div>
         </PageWrapper>
       </>
